@@ -31,7 +31,7 @@
     
     ctest # test installation
 
-5. Install and set environements
+5. Install and set environments
 
    make install
    
