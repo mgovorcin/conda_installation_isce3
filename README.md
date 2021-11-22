@@ -1,4 +1,4 @@
-# Instalation of ISCE3 using conda
+# Instalation of ISCE3 using conda (NOTES)
 
 ## 1. Create folder isce3, and inside folders src, install, build
 
