@@ -25,17 +25,17 @@
 
 ## 4. Build the ISCE3 
 
-   cd build; 
+    cd build; 
    
-   CC=clang CXX=clang++ cmake -DCMAKE_FINF_FRAMEWORK=NEVER -DCMAKE_INSTALL_PREFIX=../install/ ../src/isce3/
+    CC=clang CXX=clang++ cmake -DCMAKE_FINF_FRAMEWORK=NEVER -DCMAKE_INSTALL_PREFIX=../install/ ../src/isce3/
 
-   make VERBOSE=ON 
+    make VERBOSE=ON 
     
-   ctest # test installation
+    ctest # test installation
 
 ## 5. Install and set environments
 
-   make install
+    make install
    
-   cd ..; source conda_installation_isce3/source.rc
+    cd ..; source conda_installation_isce3/source.rc
 
