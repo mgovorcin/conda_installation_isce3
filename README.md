@@ -20,6 +20,8 @@
     cd ../ # go to the ISCE3 ROOT folder 
     
     conda create --name isce3 --file conda_installation_isce3/requirements.txt
+    
+    conda activate isce3
 
 ## 4. Build the ISCE3 
 
@@ -27,9 +29,9 @@
    
    CC=clang CXX=clang++ cmake -DCMAKE_FINF_FRAMEWORK=NEVER -DCMAKE_INSTALL_PREFIX=../install/ ../src/isce3/
 
-    make VERBOSE=ON 
+   make VERBOSE=ON 
     
-    ctest # test installation
+   ctest # test installation
 
 ## 5. Install and set environments
 
