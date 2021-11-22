@@ -1,10 +1,10 @@
 # Instalation of ISCE3 using conda
 
-1. Create folder isce3, and inside folders src, install, build
+## 1. Create folder isce3, and inside folders src, install, build
 
     mkdir isce3; mkdir isce3/src isce3/install isce3/build
 
-2. Clone git repositories to your local machine
+## 2. Clone git repositories to your local machine
 
     Conda environement requirement and source files
     
@@ -15,13 +15,13 @@
     
     cd src; git clone https://github.com/isce-framework/isce3    
 
-3. Create conda env isce3 using the requirement.txt 
+## 3. Create conda env isce3 using the requirement.txt 
 
     cd ../ # go to the ISCE3 ROOT folder 
     
     conda create --name isce3 --file conda_installation_isce3/requirements.txt
 
-4. Build the ISCE3 
+## 4. Build the ISCE3 
 
    cd build; 
    
@@ -31,7 +31,7 @@
     
     ctest # test installation
 
-5. Install and set environments
+## 5. Install and set environments
 
    make install
    
