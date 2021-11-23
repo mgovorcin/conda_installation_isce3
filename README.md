@@ -19,16 +19,26 @@
 
     cd ../ # go to the ISCE3 ROOT folder 
     
-    conda create --name isce3 --file conda_installation_isce3/requirements.txt
-    
+    conda create --name isce3
     conda activate isce3
-
+    
+    #Install mamba package for parallelized installation of conda packages
+    conda install mamba
+    
+    # Install all isce3 dependencies
+    mamba install -yes --file conda_installation_isce3/requirements.txt
+    
 ## 4. Build the ISCE3 
 
     cd build; 
    
     CC=clang CXX=clang++ cmake -DCMAKE_FINF_FRAMEWORK=NEVER -DCMAKE_INSTALL_PREFIX=../install/ ../src/isce3/
-
+     
+    # if clang cannot find conda LIBRARY and INCLUDE path, set it manually
+     export CMAKE_INCLUDE_PATH={$CONDA_INSTALL_DIR}/envs/isce3/include
+     export CMAKE_LIBRARY_PATH={$CONDA_INSTALL_DIR}/envs/isce3/lib
+     
+     
     make VERBOSE=ON 
     
     ctest # test installation
@@ -38,4 +48,11 @@
     make install
    
     cd ..; source conda_installation_isce3/source.rc
+    
+## Bugs and fixes
+    Building with cmake cannot find Gtest, and make fails at 43%
+      Fix: conda install gtest -c conda-forge
+    
+    ctest fails only at 42 test: test.cxx.isce3.geometry.bbox.geoperimeter_equator (Failed) 
+      Fix: TODO
 
