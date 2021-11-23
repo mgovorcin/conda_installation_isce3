@@ -9,4 +9,8 @@ numpy
 cython
 fftw
 gsl
+<<<<<<< HEAD
 eigen
+=======
+eigen
+>>>>>>> c1a996fad1a05468456fcbf1e101c3b433c233e2
