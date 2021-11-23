@@ -32,7 +32,7 @@
 
     cd build; 
    
-    CC=clang CXX=clang++ cmake -DCMAKE_FINF_FRAMEWORK=NEVER -DCMAKE_INSTALL_PREFIX=../install/ ../src/isce3/
+    CC=clang CXX=clang++ cmake -DCMAKE_FIND_FRAMEWORK=NEVER -DCMAKE_INSTALL_PREFIX=../install/ ../src/isce3/
      
     # if clang cannot find conda LIBRARY and INCLUDE path, set it manually
      export CMAKE_INCLUDE_PATH={$CONDA_INSTALL_DIR}/envs/isce3/include
