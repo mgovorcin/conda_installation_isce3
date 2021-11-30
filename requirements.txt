@@ -1,16 +1,45 @@
-cmake=3.18
-gdal
-hdf5
-gtest=1.10
-pyre
-pybind11
-ruamel.yaml
-numpy
+## C/C++ Compilers and Related Packages
+clang_osx-64
+clangxx_osx-64
+cmake
 cython
-fftw
+openmp
+pybind11
+pyre
 gsl
-<<<<<<< HEAD
+coreutils
+cudatoolkit
+## Packages for Tests
+gmock
+gtest
+pytest
+## Common Python Packages
+h5py
+hdf5
+numpy
+scipy
+fftw
+gawk
+pandas
 eigen
-=======
-eigen
->>>>>>> c1a996fad1a05468456fcbf1e101c3b433c233e2
+matplotlib
+sphinx
+#wget
+## Yaml Packages
+pyyaml
+ruamel.yaml
+yamale
+#GDAl Package
+libgdal
+gdal
+shapely
+
+
+
+
+
+
+
+
+
+

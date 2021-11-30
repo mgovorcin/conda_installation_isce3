@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 #!/bin/bash
-=======
-!/bin/bash
->>>>>>> c1a996fad1a05468456fcbf1e101c3b433c233e2
+
 ISCE3_HOME="$(dirname "$(pwd)")"
 
 echo "ISCE_HOME_DIR: $ISCE3_HOME"
