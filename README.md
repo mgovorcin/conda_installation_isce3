@@ -37,12 +37,13 @@
           
     make VERBOSE=on;
     
-    source conda_installation_isce3/source.rc
+    #Set environments
+    source conda_installation_isce3/source.rc;
 
     # Test ISCE3 Instalation
-      ctest: 
+      ctest; 
 
-## 5. Install and set environments
+## 5. Install 
 
     make install;
    
