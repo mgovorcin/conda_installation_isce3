@@ -1,17 +1,18 @@
 #!/bin/bash
 
-ISCE3_HOME="$(dirname "$(pwd)")"
+#ISCE3_HOME="$(dirname "$(pwd)")"
+ISCE3_HOME=/Users/govorcin/insar/isce3
 
 echo "ISCE_HOME_DIR: $ISCE3_HOME"
 
 ###### ISCE3 INSTALATIION DIR ##############
 
 ISCE3_LIB="$ISCE3_HOME/install/lib"
-ISCE3_PYHTON="$ISCE3_HOME/install/packages"
+ISCE3_PYTHON="$ISCE3_HOME/install/packages"
 ISCE3_PATH="$ISCE3_HOME/install/bin"
 
 ##############################################
 
 export PATH=$PATH:$ISCE3_PATH
-export PYTHONPATH=$PYTHONPATH:$ISCE3_PYHTON
-export LD_LIBRARY_PATH=$$LD_LIBRARY_PATH:$ISCE3_LIB
+export PYTHONPATH=$PYTHONPATH:$ISCE3_PYTHON
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ISCE3_LIB
